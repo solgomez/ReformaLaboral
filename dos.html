@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Reforma Laboral | México</title>
+
+    <!-- RECAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!--JQUERY-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+    <!--GOOGLEFONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&display=swap" rel="stylesheet">
+
+    <!--BOOTSTRAP-->
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!--HIGHCHARTS-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/mx/mx-all.js"></script>
+
+    <!--JQUERY.UI--><!-- choca antes-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="lib/date/ui.datepicker-es-MX.js"></script>
+    <link rel="stylesheet" href="lib/date/datepicker.css">
+
+    <!--FANCYBOX-->
+    <link rel="stylesheet" href="./js/fancybox/dist/jquery.fancybox.min.css" />
+
+    <script src="./js/fancybox/dist/jquery.fancybox.min.js"></script>
+
+
+    <!--GOB MX-->
+    <link href="https://framework-gb.cdn.gob.mx/qa/assets/styles/main.css" rel="stylesheet">
+
+    <!--CSS KAT-->
+    <link rel="stylesheet" href="./template.css" />
+
+</head>
+<body>
+<div>
+    <style>
+        #imagenprincipal {
+            height: calc(70vh - 120px);
+            background: url("./MICROFONO.png") center center;
+            background-size:contain ;
+        }
+        #supertitulo h1 {
+            color: #ffffff;
+            top: 9vh;
+        }
+        .cimg img {
+            width: 100%;
+        }
+        .col-md-4.consejopersonajes {
+            background: white;
+            min-height: 535px;
+            padding: 0;
+            border: 10px solid #245c4d;
+        }
+        .cnombrecargo h5 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .cnombrecargo {
+            display: block;
+            margin: auto;
+            background: #e0c9a3;
+            padding: 10px;
+            min-height: 78px;
+        }
+        .ccontacto.text-center {
+            padding: 10px;
+            color: black;
+        }
+        .ccontacto.text-center p {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            var primero = document.getElementById("primero");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                primero.className += " primerhijo";
+                $('.desplegable').show();
+            } else {
+                x.className = "topnav";
+                primero.className = "bordederecho desplegable";
+                $('.desplegable').hide();
+            }
+
+        }
+    </script>
+    <div id="menuprincipal">
+        <div class="topnav" id="myTopnav">
+            <div id="logojovenes" class="topmenu izquierdamenu">
+                <img src="./logo.png" alt="Reforma Laboral" class="logoprincipal">
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="topmenu derechamenu" >
+                <a href="index.html#normatividad" class="bordederecho desplegable" id="primero">Normatividad</a>
+                <a href="index.html#consejo" class="bordederecho desplegable">Consejo de Coordinación</a>
+                <a href="index.html#documentos" class="bordederecho desplegable">Documentos</a>
+                <a href="index.html#container" class="bordederecho desplegable">Entidades Federativas</a>
+                <a href="index.html#difusion" class="bordederecho desplegable">Difusión</a>
+                <a href="index.html#contacto" class="desplegable">Contacto</a>
+            </div>
+        </div>
+    </div>
+    <div id="imagenprincipal">
+        <div id="supertitulo">
+            <h1>
+                CONSEJO DE <BR> COORDINACIÓN
+            </h1>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div id="intro" class="fullpage">
+        <p>El Consejo de Coordinación para la Implementación de la Reforma al Sistema de Justicia Laboral, es una instancia nacional el cual está integrado por:</p>
+        <br>
+    </div>
+
+    <div id="comomeinscribo" class="verdereforma fullpage">
+
+        <div class="row limite cajarow">
+            <div class="col-md-12 espacioabajo">
+                <h3 class="hcolorblanco">INTEGRACIÓN</h3>
+            </div>
+        </div>
+        <div class="row limite cajarow">
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Luisa María Alcalde Luján</h5>
+                    <h5 class="hcolorcafe ">Secretaria del Trabajo y Previsión Social</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc1.jpg" alt="Luisa María Alcalde Luján" >
+                </div>
+                <div class="ccontacto text-center">
+                    <p><strong>Presidenta del Consejo de Coordinación para la Implementación de la Reforma al Sistema de Justicia Laboral.</strong> </p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>correo: luisa.alcalde@stps.gob.mx</p>
+                    <p>TEL: 20 00 53 00</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Arturo Herrera Gutiérrez</h5>
+                    <h5 class="hcolorcafe ">Secretario de Hacienda y Crédito Público</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc2.jpg" alt="Arturo Herrera Gutiérrez">
+                </div>
+                <div class="ccontacto text-center">
+                    <p><strong>Representante de la SHCP</strong></p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>Direccion: Palacio Nacional (Calle Correo Mayor esquina con calle Soledad), Colonia Centro, C.P. 06060, Ciudad de México.</p>
+                    <p>Tel: 36882000</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Arturo Zaldívar Lelo de Larrea</h5>
+                    <h5 class="hcolorcafe ">Ministro Presidente de la Suprema Corte de Justicia de la Nación</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc3.jpg" alt="Arturo Zaldívar Lelo de Larrea">
+                </div>
+                <div class="ccontacto text-center">
+                    <p><strong>Representante del Poder Judicial de la Federación</strong></p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>Direccion: Pino Suárez #2, Col. Centro. Cuauhtémoc,
+                        C.P. 06065, México, Ciudad de México</p>
+                    <p>Tel: 4113 1000</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Francisco Domínguez Servién</h5>
+                    <h5 class="hcolorcafe ">Gobernador Constitucional del Estado de Querétaro</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc6.jpg" alt="Francisco Domínguez Servién">
+                </div>
+                <div class="ccontacto text-center">
+                    <p><strong>Presidente de la Conferencia Nacional de Gobernadores Representante de la CONAGO</strong></p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>Dirección : 5 de Mayo S/N esq. Luis Pasteur, Col.Centro
+                        Histórico C.P.:76000, Santiago de Querétaro, Qro., México</p>
+                    <p>Correo electrónico : poderejecutivo@queretaro.gob.mx</p>
+                    <p>Tel : (442)2385-000</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Sergio Javier Medina Peñaloza</h5>
+                    <h5 class="hcolorcafe ">Presidente del Tribunal Superior de Justicia del Estado de México</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc5.jpg" alt="Sergio Javier Medina Peñaloza">
+                </div>
+                <div class="ccontacto text-center">
+                    <p><strong>Presidente de la Comisión Nacional de Tribunales
+                        Superiores de Justicia de los Estados Unidos Mexicanos
+                        Representante de CONATRIB</strong></p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+
+                    <p>Direccion: Av. Jacinto Canek s/n x 90 Col. Inalámbrica, C.P.97069</p>
+                        <p>Tel:1679200</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Soledad Aragón Martínez</h5>
+                    <h5 class="hcolorcafe ">Secretaria de Trabajo y Fomento al Empleo de la CDMX y Presidenta de la Conferencia Nacional de Secretarios del Trabajo (CONASETRA)</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc4.jpg" alt="Soledad Aragón Martínez">
+                </div>
+                <div class="ccontacto text-center">
+                    <p><strong>Representante de CONASETRA</strong></p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>Direccion: Calzada San Antonio Abad 32, Colonia Tránsito, C.P.
+                        06820, Alcaldía Cuauhtémoc. Ciudad de México</p>
+                    <p>Tel: 57 09 32 33 ext. 5003</p>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+    </div>
+    <div id="atribconsejo" class="blanco fullpage pnegritas">
+        <h3>ATRIBUCIONES <br>DEL CONSEJO DE COORDINACIÓN</h3>
+        <div class="row limite cajarow">
+            <div class="col-md-6 textojust">
+                <ol type="I" >
+                    <li><p>Elaborar las políticas, programas y mecanismos necesarios para instrumentar, a nivel federal y local, una estrategia nacional para la implementación del Sistema de Justicia Laboral, que contemple la programación de compromisos y etapas de desarrollo;</p></li>
+                    <li><p>Diseñar criterios para la implementación de las adecuaciones legales y normativas necesarias para cumplir con su objeto; </p></li>
+                    <li><p>Proponer a las instancias correspondientes los cambios organizacionales, la construcción y operación de la infraestructura que se requieran; </p></li>
+                    <li><p>Emitir los lineamientos para la evaluación y seguimiento de las acciones que se deriven de las políticas, programas y mecanismos señaladas en la fracción II de este artículo </p></li>
+                    <li><p>Auxiliar en la elaboración de los programas de capacitación y difusión sobre el Sistema de Justicia Laboral dirigidos a jueces, procuradores del trabajo, defensores y asesores públicos, conciliadores, peritos, abogados, servidores públicos involucrados, representantes de trabajadores y empleadores, instituciones educativas, así como a la sociedad en general;</p></li>
+                </ol>
+            </div>
+            <div class="col-md-6 textojust">
+                <ol type="I" start="6">
+                    <li><p>Coadyuvar con el Congreso de la Unión, las Legislaturas de las Entidades Federativas, en el seguimiento y evaluación de los recursos presupuestales ejercidos en la implementación y operación del Sistema de Justicia Laboral;</p></li>
+                    <li><p>Coadyuvar con el Congreso de la Unión, las Legislaturas de las Entidades Federativas, en el seguimiento y evaluación de los recursos presupuestales ejercidos en la implementación y operación del Sistema de Justicia Laboral;</p></li>
+                    <li><p>Elaborar los criterios para la suscripción de convenios de colaboración interinstitucional; así como los acuerdos de coordinación con los gobiernos de las Entidades Federativas y de cooperación internacional;</p></li>
+                    <li><p>Analizar los informes que le remita la Secretaría Técnica sobre los avances de sus actividades; Interpretar las disposiciones del presente artículo y su alcance jurídico, así como desahogarlas consultas que se susciten con motivo de su aplicación</p></li>
+                    <li><p>Las demás que se requieran para el cumplimiento de su objeto</p></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div id="atribconsejo" class="blanco fullpage pnegritas">
+        <h3 class="hcolorbeige col-md-12 espacioabajo">ATRIBUCIONES <br>DE LA SECRETARÍA TÉCNICA</h3>
+        <div class="row limite cajarow">
+            <div class="col-md-6 textojust">
+                <ol type="I" >
+                    <li><p>Auxiliar al Consejo de Coordinación en la elaboración de políticas, programas y mecanismos para instrumentar con las instancias correspondientes una estrategia nacional para la implementación del Sistema de Justicia Laboral</p></li>
+                    <li><p>Colaborar con las autoridades locales y federales en la implementación de la Reforma</p></li>
+                    <li><p>Integrar los informes sobre los avances de los planes y programas aprobados</p></li>
+                    <li><p>Elaborar y someter a consideración del Consejo de Coordinación el informe correspondiente sobre los avances de sus actividades, para su aprobación;</p></li>
+                    <li><p>Dar seguimiento a los Acuerdos y resoluciones del Consejo de Coordinación;</p></li>
+                    <li><p>Resguardar la información, documentos y el libro de actas de las sesiones.</p></li>
+                    <li><p>Recabar la información que se requiera para el cumplimiento del objeto del Consejo de Coordinación;</p></li>
+                </ol>
+            </div>
+            <div class="col-md-6 textojust">
+                <ol type="I" start="8">
+                    <li><p>Coadyuvar con el Consejo de Coordinación en la interpretación de estos Lineamientos, así como de lo dispuesto en el Décimo Séptimo Transitorio del Decreto de la reforma laboral publicado en el Diario Oficial de la Federación el 1 de mayo de 2019, así como en el desahogo de las dudas que se susciten con motivo de su aplicación; Elaborar y someter a consideración del Consejo de Coordinación el informe correspondiente sobre los avances de sus actividades, para su aprobación;</p></li>
+                    <li><p>Planear, programar, organizar, dirigir, controlar y evaluar el desarrollo de las acciones encomendadas a las áreas o unidades administrativas de apoyo que conforman la Secretaría Técnica;</p></li>
+                    <li><p>Formular los proyectos de manuales de organización, procedimientos y servicios de las diversas áreas de la Secretaría Técnica</p></li>
+                    <li><p>Las demás que le atribuya el Consejo de Coordinación </p></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div id="documentos" class="blanco fullpage ">
+        <div class="row limite cajarow">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 textojust">
+                <h3>SESIONES</h3>
+                <div id="accordion">
+                    <p class="pnegritas"> I. Instalación del Consejo de Coordinación <br>31 de mayo del 2019</p>
+                    <div>
+                        <div class="lidocs">
+                            <div class="vinblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/ACUERDOS_SESIÓN_INSTALACIÓN.pdf" class="anoclass" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a>
+                            </div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/ACUERDOS_SESIÓN_INSTALACIÓN.pdf" class="anoclass" target="_blank"> 1. Acuerdo 01-31/05/2019. Aprobación del calendario de sesiones ordinarias del Consejo de Coordinación para la implementación de la Reforma al Sistema de Justicia Laboral.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/ACUERDO_02-31-05-20119.pdf" class="anoclass" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a>
+                            </div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/ACUERDO_02-31-05-20119.pdf" class="anoclass" target="_blank"> 2. Acuerdo 02-31/05/2019. Aprobación de la Estrategia Nacional para la Implementación del Sistema de Justicia Laboral.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_03-31-05-19.pdf" class="anoclass" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a>
+                            </div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_03-31-05-19.pdf" class="anoclass" target="_blank"> 3. Acuerdo 03-31/05/2019. Aprobación de los medios de comunicación oficiales entre los integrantes del Consejo de Coordinación y la creación de un sitio oficial de internet.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="pnegritas"> II. Primera Sesión Ordinaria 2019 <br>05 de julio del 2019 </p>
+                    <div>
+                        <div class="lidocs">
+                            <div class="vinblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo04_05_07_2019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo04_05_07_2019.pdf" class="anoclass" target="_blank"> 1. Acuerdo 04-05/07/2019. Por el que se aprueba el acta CCIRS-JL/01/2019, de la Sesión de Instalación del Consejo De Coordinación.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo05_05_07_2019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo05_05_07_2019.pdf" class="anoclass" target="_blank"> 2. Acuerdo 05-05/07/2019. Por el que se aprueba el formato para la elaboración de planes y programas de trabajo de las Juntas Locales de Conciliación y Arbitraje, para la conclusión de los asuntos en trámite y la ejecución eficaz de los laudos.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo06_05_07_2019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo06_05_07_2019.pdf" class="anoclass" target="_blank"> 3. Acuerdo 06-05/07/2019. Por el que se exhorta a las Entidades Federativas a integrar sus grupos interinstitucionales para la implementación de la Reforma Laboral.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="pnegritas"> III. Segunda Sesión Odinaria 2019 <br>27 de septiembre del 2019</p>
+                    <div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_07-27092019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_07-27092019.pdf" class="anoclass" target="_blank"> 1. ACUERDO 7-27/09/2019 Por el que se aprueba el acta CCIRSJL/02/2019, de la primera sesión ordinaria del consejo de coordinación para la implementación de la reforma al sistema de justicia laboral.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo 08-27092019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo 08-27092019.pdf" class="anoclass" target="_blank"> 2. ACUERDO 8-27/09/2019 Por el que se aprueban los criterios generales para la transferencia de archivos registrales de las juntas locales de conciliación y arbitraje al centro federal de conciliación y registro laboral.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_09-27092019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_09-27092019.pdf" class="anoclass" target="_blank"> 3. ACUERDO 09-27/09/2019 Acuerdo por el que se aprueba el calendario de Sesiones Ordinarias del Consejo de Coordinación para la Implementación del Sistema de Justicia Laboral, correspondiente al ejercicio 2020.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_10-27092019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_10-27092019.pdf" class="anoclass" target="_blank"> 4. ACUERDO 10-27/09/2019 Por el que se exhorta a las entidades federativas que comprenden la primera etapa de implementación de la reforma al sistema de justicia laboral, a realizar las acciones de coordinación necesarias, en el ámbito de sus competencias, para dar inicio al nuevo sistema de justicia laboral, proyectada para el año 2020.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_11-27092019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_11-27092019.pdf" class="anoclass" target="_blank"> 5. ACUERDO 11-27/09/2019 Por el que se exhorta a los organismos y entidades públicas a establecer las instancias internas de conciliación para concluir el rezago de juicios tramitados ante las juntas de conciliación y arbitraje.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_12-27092019.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Acuerdo_12-27092019.pdf" class="anoclass" target="_blank"> 6. ACUERDO 12-27/09/2019 Por el que se exhorta a las procuradurías de la defensa del trabajo y a las juntaslocales de conciliación y arbitraje, a que brinden orientación y facilidades a las organizaciones sindicales en la adecuación de sus estatutos, conforme a lo previsto en la reforma al sistema de justicia laboral.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+
+</main>
+<div class="fullpage beige" >
+    <div class="row cajarow limite" id="footerlogo">
+        <div class="col-md-12">
+            <h3 class="hcolornegro">CONTACTO</h3>
+            <h4 class="hcolornegro">ORIENTACIÓN Y ASESORÍA</h4>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center hcolornegro">PROCURADURÍA FEDERAL DE LA DEFENSA DEL TRABAJO</p>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-map-marker-alt"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    Dr. José María Vértiz 211, Doctores,Ciudad de México. C.P. 06720
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-envelope"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    orientacionprofedet@stps.gob.mx
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-phone"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    59 98 20 00
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center hcolornegro">UNIDAD DE ENLACE PARA LA REFORMA AL SISTEMA DE JUSTICIA LABORAL</p>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-map-marker-alt"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    La Morena 804 Piso 5, Narvarte Poniente. Ciudad de M éxico, C.P. 03020
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-envelope"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    reforma.laboral@stps.gob.mx
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-phone"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    (55) 2000 5300
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $( function() {
+        $(".fancybox").fancybox();
+        var icons = {
+            header: "ui-icon-caret-1-n",
+            activeHeader: "ui-icon-caret-1-s"
+        };
+        $( "#accordion" ).accordion({
+            collapsible: true,
+            heightStyle: "content",
+            icons: icons
+        });
+        $( "#toggle" ).button().on( "click", function() {
+            if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+                $( "#accordion" ).accordion( "option", "icons", null );
+            } else {
+                $( "#accordion" ).accordion( "option", "icons", icons );
+            }
+        });
+    } );
+</script>
+
+
+<script src="https://framework-gb.cdn.gob.mx/qa/gobmx.js"></script>
+
+</body>
+</html>

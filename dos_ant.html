@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Programa Jóvenes Construyendo el Futuro - Desarrollando el Talento | México</title>
+
+    <!-- RECAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!--JQUERY-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+    <!--GOOGLEFONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&display=swap" rel="stylesheet">
+
+    <!--BOOTSTRAP-->
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!--HIGHCHARTS-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/mx/mx-all.js"></script>
+
+    <!--JQUERY.UI--><!-- choca antes-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="lib/date/ui.datepicker-es-MX.js"></script>
+    <link rel="stylesheet" href="lib/date/datepicker.css">
+
+    <!--FANCYBOX-->
+    <link rel="stylesheet" href="./js/fancybox/dist/jquery.fancybox.min.css" />
+
+    <script src="./js/fancybox/dist/jquery.fancybox.min.js"></script>
+
+
+    <!--GOB MX-->
+    <link href="https://framework-gb.cdn.gob.mx/qa/assets/styles/main.css" rel="stylesheet">
+
+    <!--CSS KAT-->
+    <link rel="stylesheet" href="./template.css" />
+
+</head>
+<body>
+<div>
+    <style>
+        #imagenprincipal {
+            height: calc(70vh - 120px);
+            background: url("./MICROFONO.png") center center;
+            background-size:contain ;
+        }
+        #supertitulo h1 {
+            color: #ffffff;
+            top: 9vh;
+        }
+        .cimg img {
+            width: 100%;
+        }
+        .col-md-4.consejopersonajes {
+            background: white;
+            min-height: 535px;
+            padding: 0;
+            border: 10px solid #245c4d;
+        }
+        .cnombrecargo h5 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .cnombrecargo {
+            display: block;
+            margin: auto;
+            background: #e0c9a3;
+            padding: 10px;
+            min-height: 78px;
+        }
+        .ccontacto.text-center {
+            padding: 10px;
+            color: black;
+        }
+        .ccontacto.text-center p {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            var primero = document.getElementById("primero");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                primero.className += " primerhijo";
+                $('.desplegable').show();
+            } else {
+                x.className = "topnav";
+                primero.className = "bordederecho desplegable";
+                $('.desplegable').hide();
+            }
+
+        }
+    </script>
+    <div id="menuprincipal">
+        <div class="topnav" id="myTopnav">
+            <div id="logojovenes" class="topmenu izquierdamenu">
+                <img src="./logo.png" alt="Reforma Laboral" class="logoprincipal">
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="topmenu derechamenu" >
+                <a href="#" class="bordederecho desplegable" id="primero">Normatividad</a>
+                <a href="#" class="bordederecho desplegable">Consejo de Coordinación</a>
+                <a href="#" class="bordederecho desplegable">Documentos</a>
+                <a href="#" class="bordederecho desplegable">Entidades Federativas</a>
+                <a href="#" class="bordederecho desplegable">Difusión</a>
+                <a href="#" class="desplegable">Contacto</a>
+            </div>
+        </div>
+    </div>
+    <div id="imagenprincipal">
+        <div id="supertitulo">
+            <h1>
+                CONSEJO DE <BR> COORDINACIÓN
+            </h1>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div id="intro" class="fullpage">
+        <p>El Consejo de Coordinación para la Implementación de la
+            Reforma al Sistema de Justicia Laboral, es una instancia nacional....</p>
+        <br>
+    </div>
+
+    <div id="comomeinscribo" class="verdereforma fullpage">
+
+        <div class="row limite cajarow">
+            <div class="col-md-12 espacioabajo">
+                <h3 class="hcolorblanco">INTEGRACIÓN</h3>
+            </div>
+        </div>
+        <div class="row limite cajarow">
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Luisa María Alcalde Luján</h5>
+                    <h5 class="hcolorcafe ">Secretaria del Trabajo y Previsión Social</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc1.jpg" alt="Luisa María Alcalde Luján" >
+                </div>
+                <div class="ccontacto text-center">
+                    <p>Presidenta del Consejo de Coordinación
+                        para la Implementación de la Reforma Laboral</p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>correo: luisa.alcalde@stps.gob.mx</p>
+                    <p>TEL: 20 00 53 00</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Arturo Herrera Gutiérrez</h5>
+                    <h5 class="hcolorcafe ">Secretario de Hacienda y Crédito Público</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc2.jpg" alt="Arturo Herrera Gutiérrez">
+                </div>
+                <div class="ccontacto text-center">
+                    <p>Representante de la SHCP</p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>Direccion: Palacio Nacional (Calle Correo Mayor esquina con calle Soledad), Colonia Centro, C.P. 06060, Ciudad de México.</p>
+                    <p>Tel: 36882000</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Arturo Zaldivar Lelo de Larrea</h5>
+                    <h5 class="hcolorcafe ">Ministro Presidente de la Suprema Corte de Justicia de la Nación</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc3.jpg" alt="Arturo Zaldivar Lelo de Larrea">
+                </div>
+                <div class="ccontacto text-center">
+                    <p>Representante del Poder Judicial de la Federación</p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>Direccion: Pino Suárez #2, Col. Centro. Cuauhtémoc,
+                        C.P. 06065, México, Ciudad de México</p>
+                    <p>Tel: 4113 1000</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Francisco Domínguez Servién</h5>
+                    <h5 class="hcolorcafe ">Gobernador Constitucional del Estado de Querétaro</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc6.jpg" alt="Francisco Domínguez Servién">
+                </div>
+                <div class="ccontacto text-center">
+                    <p>Presidente de la Conferencia Nacional de Gobernadores Representante de la CONAGO</p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>Dirección : 5 de Mayo S/N esq. Luis Pasteur, Col.Centro
+                        Histórico C.P.:76000, Santiago de Querétaro, Qro., México</p>
+                    <p>Correo electrónico : poderejecutivo@queretaro.gob.mx</p>
+                    <p>Tel : (442)2385-000</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Sergio Javier Medina Peñaloza</h5>
+                    <h5 class="hcolorcafe ">Presidente del Tribunal Superior de Justicia del Estado de México</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc5.jpg" alt="Sergio Javier Medina Peñaloza">
+                </div>
+                <div class="ccontacto text-center">
+                    <p>Presidente de la Comisión Nacional de Tribunales
+                        Superiores de Justicia de los Estados Unidos Mexicanos
+                        Representante de CONATRIB</p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+
+                    <p>Direccion: Av. Jacinto Canek s/n x 90 Col. Inalámbrica, C.P.97069</p>
+                        <p>Tel:1679200</p>
+                </div>
+            </div>
+            <div class="col-md-4 consejopersonajes">
+                <div class="cnombrecargo">
+                    <h5 class="hcolorcafe ">Soledad Aragón Martínez</h5>
+                    <h5 class="hcolorcafe ">Secretaria de Trabajo y Fomento al Empleo de la CDMX y Presidenta de la Conferencia Nacional de Secretarios del Trabajo (CONASETRA)</h5>
+                </div>
+                <div class="cimg">
+                    <img src="cc4.jpg" alt="Soledad Aragón Martínez">
+                </div>
+                <div class="ccontacto text-center">
+                    <p>Representante de CONASETRA</p>
+                    <br>
+                    <p class="pnegritas ">CONTACTO</p>
+                    <p>Direccion: Calzada San Antonio Abad 32, Colonia Tránsito, C.P.
+                        06820, Alcaldía Cuauhtémoc. Ciudad de México</p>
+                    <p>Tel: 57 09 32 33 ext. 5003</p>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row limite cajarow">
+            <h3 class="hcolorbeige espacioabajo" >Reforma Secundaria</h3>
+        </div>
+        <div class="row limite cajarow">
+            <div class="col-md-6 ">
+                <div class="cajabeigeblanco">
+                    <h3 class="hcolorcafe">Reforma Laboral <br> Apartado A</h3>
+                    <p>DECRETO por el que se reforman, adicionan y
+                        derogan diversas disposiciones de la Ley Federal
+                        del Trabajo, de la Ley Orgánica del Poder Judicial
+                        de la Federación,de la Ley Federal de la Defensoría
+                        Pública, de la Ley del Instituto del Fondo Nacional
+                        de la Vivienda para los Trabajadores y de la Ley del
+                        Seguro Social, en materia de Justicia Laboral,
+                        Libertad Sindical y Negociación Colectiva.</p>
+                    <a href="https://reformalaboral.stps.gob.mx/documentos/Decretro_LFT_01.05.19.pdf" class="btn btn-verdereforma btn-derecha" target="_blank">Descargar</a>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="cajabeigeblanco">
+                    <h3 class="hcolorcafe">Reforma Laboral <br> Apartado B</h3>
+                    <p>DECRETO por el que se reforman, adicionan
+                        y derogan diversas disposiciones de la
+                        Ley Federal de los Trabajadores al Servicio
+                        del Estado, Reglamentaria del apartado B)
+                        del Artículo 123 Constitucional.</p>
+                    <a href="https://reformalaboral.stps.gob.mx/documentos/Decreto_apartado_B.pdf" class="btn btn-verdereforma btn-derecha" target="_blank">Descargar</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row limite cajarow">
+            <h3 class="hcolorbeige col-md-12 espacioabajo">Legitimación de Contratos Colectivos</h3>
+
+            <p class="col-md-12">
+                El Protocolo para la Legitimación de Contratos Colectivos de Trabajo Existentes,
+                publicado el 31 de a gosto de 2 019 en el Diar io Oficial de la F ederación;
+                establece las reglas y el procedimiento de legitimación que garantiza que los
+                trabajadores conozcan y aprueben el contenido de sus contratos colectivos a
+                través del voto personal, libre, directo y secreto.
+            </p>
+        </div>
+        <div class="row limite cajarow">
+            <div class="col-md-4">
+                <a href="https://reformalaboral.stps.gob.mx/documentos/protocolo_de_legitimacion.pdf" target="_blank" class="anoclass">
+                    <img src="./4.png" alt="" class="imgjusticia">
+                    <p class="pnegritas hcolorblanco">Descargar el Protocolo</p>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://legitimacioncontratoscolectivos.stps.gob.mx/" target="_blank" class="anoclass">
+                    <img src="./5.png" alt="" class="imgjusticia">
+                    <p class="pnegritas">Plataforma para la legitimación de Contratos Colectivos</p>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://legitimacioncontratoscolectivos.stps.gob.mx/upload/tutorial.mp4" class="anoclass fancybox"  >
+                    <img src="./6.png" alt="" class="imgjusticia">
+                    <p class="pnegritas">Video Tutorial</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="consejo" class="blanco fullpage">
+        <div class="row limite cajarow">
+            <div class="col-md-6">
+                <img src="./GRUPAL.png" alt="" class="img-home">
+            </div>
+            <div class="col-md-6 text-left hcolornegro">
+                <h3>CONSEJO DE COORDINACIÓN</h3>
+                <p class="pnegritas">LINEAMIENTOS DE OPERACIÓN</p>
+                <p><a href="https://reformalaboral.stps.gob.mx/documentos/Lineamientos.pdf" class="fancybox apop" target="_blank">Lineamientos para la operación del Consejo de Coordinación para la Implementación de la Reforma al Sistema de Justicia Laboral.</a></p>
+                <p class="pnegritas">INTEGRACIÓN</p>
+
+                <ul>
+                    <li>Secretaría del Trabajo y Previsión Social (STPS)</li>
+                    <li>Secretaría de Hacienda y Crédito Público (SHCP)</li>
+                    <li>Poder Judicial de la Federación (PJF)</li>
+                    <li>Conferencia Nacional de Gobernadores (CONAGO)</li>
+                    <li>Comisión Nacional de Tribunales Superiores de</li>
+                    <li>Justicia (CONATRIB)</li>
+                    <li>Conferencia Nacional de Secretarios del Trabajo (CONASETRA)</li>
+                </ul>
+
+                <p class="pnegritas">SESIONES</p>
+                <a href="#" class="btn btn-verdereforma btn-derecha">Ver más</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="container" class="fullpage beige" style="min-height: 800px;">
+        <div class="loading">
+            <i class="icon-spinner icon-spin icon-large"></i>
+            Cargando...
+        </div>
+    </div>
+
+    <div id="documentos" class="blanco fullpage">
+        <div class="row limite cajarow">
+
+            <div class="col-md-6 text-left">
+                <h3>DOCUMENTOS RELEVANTES</h3>
+                <div id="accordion">
+                    <p class="pnegritas"> JUNTAS DE CONCILIACIÓN Y ARBITRAJE</p>
+                    <div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/DSAJLCYA.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/DSAJLCYA.pdf" class="anoclass" target="_blank">   Diagnóstico situación de los archivos de las juntas locales de conciliación y arbitraje.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/DPEAJL.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/DPEAJL.pdf" class="anoclass" target="_blank">  Diagnóstico preliminar sobre el estado actual de la justicia laboralen méxico 2019</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Plan_Trabajo_Juntas.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Plan_Trabajo_Juntas.pdf" class="anoclass" target="_blank">  Formato base de elaboración de planes y programas de trabajo de las juntas locales de conciliación y arbitraje para la conclusión de los asunt os en trámite y la ejecución eficaz de los laudos.</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Plan_Trabajo_Conclusion.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Plan_Trabajo_Conclusion.pdf" class="anoclass" target="_blank"> Plan de trabajo para la conclusión de los asuntos en trámite y la ejecución eficaz de los laudos, así como para el cier re de la junta federal de conciliación y arbitraje</a>
+                            </div>
+                        </div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/CRITERIOS_TRANSFERENCIA.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/CRITERIOS_TRANSFERENCIA.pdf" class="anoclass" target="_blank">  Criterios generales para la transferencia de archivos registrales de las juntas locales de conciliación y arbitraje al centro federal de conciliación y registro laboral.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="pnegritas"> CENTROS DE CONCILIACIÓN</p>
+                    <div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/Ley_Organica.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/Ley_Organica.pdf" class="anoclass" target="_blank">   Modelo de ley orgánica de los centros de conciliación laborales estatales.</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <p class="pnegritas"> SINDICATOS</p>
+                    <div>
+                        <div class="lidocs">
+                            <div class="vinblock"><a href="https://reformalaboral.stps.gob.mx/documentos/GUIA_PARA_LA_ADECUACION_DE_ESTATUTOS_SINDICALES.pdf" target="_blank"><span class="vin vinbeige"><i class="fa fa-download"></i></span></a></div>
+                            <div class="liblock">
+                                <a href="https://reformalaboral.stps.gob.mx/documentos/GUIA_PARA_LA_ADECUACION_DE_ESTATUTOS_SINDICALES.pdf" class="anoclass" target="_blank">   Guía para la adecuación de estatutos sindicales.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="./CONSTANCIA.png" alt="" class="img-home">
+            </div>
+        </div>
+    </div>
+
+    <div id="difusion" class="blanco fullpage">
+        <h3 class="hcolorverde">DIFUSIÓN</h3>
+        <div class="row limite cajarow">
+            <div class="col-md-4  ">
+                <div class="bloqueverde">
+                    <a href="https://reformalaboral.stps.gob.mx/Documentos/ModificaciondeEstatutosSindicales.pdf" target="_blank" class="anoclass">
+                        <h4>...Estatutos sindicales nuevas disposiciones...</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4  ">
+                <div class="bloqueverde">
+                    <a href="https://reformalaboral.stps.gob.mx/Documentos/ProcedimientoLegitimacionContratos.pdf" target="_blank" class="anoclass">
+                        <h4>...Legitimación de contratos colectivos...</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4  ">
+                <div class="bloqueverde">
+                    <a href="https://reformalaboral.stps.gob.mx/Documentos/EstrategiaNacionalReformaLaboral.pdf" target="_blank" class="anoclass">
+                        <h4>... Implementación del sistema de justicia laboral...</h4>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</main>
+<div class="fullpage beige" >
+    <div class="row cajarow limite" id="footerlogo">
+        <div class="col-md-12">
+            <h3 class="hcolornegro">CONTACTO</h3>
+            <h4 class="hcolornegro">ORIENTACIÓN Y ASESORÍA</h4>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center hcolornegro">PROCURADURÍA FEDERAL DE LA DEFENSA DEL TRABAJO</p>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-map-marker-alt"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    Dr. José María Vértiz 211, Doctores,Ciudad de México. C.P. 06720
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-envelope"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    orientacionprofedet@stps.gob.mx
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-phone"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    59 98 20 00
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <p class="text-center hcolornegro">UNIDAD DE ENLACE PARA LA REFORMA AL SISTEMA DE JUSTICIA LABORAL</p>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-map-marker-alt"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    La Morena 804 Piso 5, Narvarte Poniente. Ciudad de M éxico, C.P. 03020
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-envelope"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    reforma.laboral@stps.gob.mx
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-phone"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    (55) 2000 5300
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+    $( function() {
+        $(".fancybox").fancybox();
+        var icons = {
+            header: "ui-icon-caret-1-n",
+            activeHeader: "ui-icon-caret-1-s"
+        };
+        $( "#accordion" ).accordion({
+            collapsible: true,
+            heightStyle: "content",
+            icons: icons
+        });
+        $( "#toggle" ).button().on( "click", function() {
+            if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+                $( "#accordion" ).accordion( "option", "icons", null );
+            } else {
+                $( "#accordion" ).accordion( "option", "icons", icons );
+            }
+        });
+    } );
+</script>
+<script type="text/javascript" src="datajcf.js"></script>
+<script type="text/javascript" src="mx-all.js"></script>
+<script type="text/javascript" src="mapa.js"></script>
+
+<script src="https://framework-gb.cdn.gob.mx/qa/gobmx.js"></script>
+
+</body>
+</html>
