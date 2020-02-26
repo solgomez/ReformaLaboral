@@ -70,7 +70,7 @@ Highcharts.mapChart('container', {
                             '</div>')
                             .dialog({
                                 title: this.name,
-                                width: 370,
+                                width: 500,
                                 height: 400
                             });
 

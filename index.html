@@ -89,7 +89,11 @@
             .modal-responsive{
                 min-width: 70%; 
             }
+            .mapa-responsive{
+                min-height: 800px !important;
+            }
         }
+
         .head-modal{
             background-color: #e0c9a3!important;
             margin-top: 0px;
@@ -100,7 +104,7 @@
             margin-bottom: 0px !important;
         }
         .margin-t{
-            margin-top: 0px;
+            margin-top: -15px;
         }
         .font-weight-bold{
             font-weight: bold !important;
@@ -117,6 +121,29 @@
         .text-xl{
             font-size: 24px !important ;
         }
+        .text-black{
+            color: black;
+        }
+        .aling-right{
+            text-align: right;
+        }
+        .btn-descargar:hover {
+            background-color: white !important;
+            border: solid 2px #dbbd90 !important;
+            color: #245c4d !important;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .btn-descargar{
+            background-color:#dbbd90;  
+            border: none; 
+            color: white;  
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .padding-2{
+            padding: 15px;
+        }
     </style>
 
 </head>
@@ -126,6 +153,7 @@
         function myFunction() {
             var x = document.getElementById("myTopnav");
             var primero = document.getElementById("primero");
+
             if (x.className === "topnav") {
                 x.className += " responsive";
                 primero.className += " primerhijo";
@@ -178,7 +206,7 @@
                 <p> Desaparecen las Juntas de Conciliación y Arbitraje y se crean Tribunales Laborales dependientes del Poder Judicial.</p>
                 <p>Antes de demandar, será necesario conciliar y buscar un acuerdo.</p>
                 <p>Los nuevos juicios serán orales, ágiles, expeditos y en presencia de un juez.</p>
-                <div style="text-align: right;">
+                <div class="aling-right">
                     <button type="button" class="btn btn-default btn-sm shadow-none btn-personalizado" data-toggle="modal" data-target="#m1">Ver más</button>
                 </div>
                 <div class="modal fade modal-responsive" id="m1">
@@ -189,16 +217,16 @@
                             </div>
                             <div class="modal-body margin-t">
                                 <p class="tit_des font-weight-bold aling-left">Etapa de Conciliación</p>
-                                <p class="text-md">a) Las partes acuden al CFCRL o a los Centros de Conciliación locales para agotar la etapa de conciliación prejudicial obligatoria, con una duración máxima de 45 días.</p>
+                                <p class="text-md text-black">a) Las partes acuden al CFCRL o a los Centros de Conciliación locales para agotar la etapa de conciliación prejudicial obligatoria, con una duración máxima de 45 días.</p>
                                 <p class="tit_des font-weight-bold aling-left">Etapa de Juicio</p>
-                                <p class="text-md">b) De no conciliar, las partes podrán iniciar un juicio ante los Tribunales Laborales ya sean locales o federales, con un nuevo procedimiento regido por principios de oralidad, inmediación, continuidad, concentración y publicidad.</p>
+                                <p class="text-md text-black">b) De no conciliar, las partes podrán iniciar un juicio ante los Tribunales Laborales ya sean locales o federales, con un nuevo procedimiento regido por principios de oralidad, inmediación, continuidad, concentración y publicidad.</p>
                                 <ul class="text-md">
-                                    <li class="text-md">La fase escrita inicia con la presentación y contestación de la demanda, presentando la constancia de no conciliación y las pruebas; se admite la reconvención y las réplicas.</li>
-                                    <li class="text-md">La fase oral consta de:</li>
+                                    <li class="text-md text-black">La fase escrita inicia con la presentación y contestación de la demanda, presentando la constancia de no conciliación y las pruebas; se admite la reconvención y las réplicas.</li>
+                                    <li class="text-md text-black">La fase oral consta de:</li>
                                     <li class="text-md" style="list-style: none;font-size: 14px !important;">
                                         <ul class="text-md">
-                                            <li class="text-md">Audiencia Preliminar. Se depura el procedimiento, se establecen hechos no controvertidos, se admiten o desechan pruebas y se cita a audiencia de juicio.</li>
-                                            <li class="text-md">Audiencia de Juicio. Se desahogan pruebas, se formulan alegatos y se emite sentencia.</li>
+                                            <li class="text-md text-black">Audiencia Preliminar. Se depura el procedimiento, se establecen hechos no controvertidos, se admiten o desechan pruebas y se cita a audiencia de juicio.</li>
+                                            <li class="text-md text-black">Audiencia de Juicio. Se desahogan pruebas, se formulan alegatos y se emite sentencia.</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -227,7 +255,7 @@
                                     <div class="modal-body margin-t">
                                         <p class="tit_des font-weight-bold aling-center text-xl">Elección de directivas sindicales</p>
                                         <p class="tit_des font-weight-bold aling-left" style="color: #b38247;">Arts. 371 y 371 Bis, LFT; y Art. 69, LFTSE</p>
-                                        <ul class="text-md" style="color: black;">
+                                        <ul class="text-md text-black">
                                             <li class="text-md">Los sindicatos elegirán a sus directivas mediante voto personal, libre, directo y secreto.</li>
                                             <li class="text-md">Se deberá garantizar la representación proporcional por razón de género.</li>
                                             <li class="text-md">Se deberá garantizar la representación proporcional por razón de género.</li>
@@ -239,52 +267,74 @@
                                     </div>                
                                 </div>
                             </div>
-                        </div>
-                       
+                        </div>                       
                     </li>
                     <li class="listdescarga">
-                        <a href="#m3" class="fancybox apop"> Firma de contratos iniciales. Se deberá demostrar respaldo de los trabajadores para obtener la “Constancia de Representatividad”. </a>
-                        <div style="display: none">
-                            <div id="m3" class="infancy">
-                                <h3>CONSTANCIA DE REPRESENTATIVIDAD</h3>
-                                <br>
-
-                                <h4 class="hcolorbeige">Art. 390 Bis, LFT</h4>
-                                <ul class="hcolornegro">
-                                    <li>Documento expedido por el CFCRL que acredita que un sindicato cuenta con la representación de al menos el treinta por ciento de los trabajadores.</li>
-                                    <li>El sindicato que pretenda emplazar a huelga para firma de un contrato colectivo inicial deberá contar con esta Constancia.</li>
-                                    <li>En caso de que se presente más de una solicitud de Constancia, el CFCRL organizará una consulta a los trabajadores para determinar qué sindicato cuenta con el respaldo de la mayoría.</li>
-                                    <li>La Constancia tendrá una vigencia de seis meses a partir de la fecha en que sea expedida.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="listdescarga">
-                        <a href="#m4" class="fancybox apop"> Ratificación de acuerdos negociados sobre el contenido de un contrato colectivo o convenio de revisión.</a>
-                        <div style="display: none">
-                            <div id="m4" class="infancy">
-                                <h3>RATIFICACIÓN DE ACUERDOS NEGOCIADOS</h3>
-                                <br>
-                                <h4 class="hcolorbeige">Arts. 390 Ter y 400 Bis, LFT</h4>
-                                <ul class="hcolornegro">
-                                    <li>Los trabajadores deberán ratificar mediante voto personal, libre, directo y secreto los acuerdos negociados por su sindicato sobre el contenido del contrato colectivo o del convenio de revisión integral (cada dos años).</li>
-                                    <li>La consulta será convocada y organizada por el sindicato que solicita la firma o revisión contractual.</li>
-                                    <li>El CFCRL podrá validar y, en su caso, realizar una nueva consulta en caso de existir duda razonable sobre la legalidad del procedimiento.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listdescarga">
-                        <a href="#m5" class="fancybox apop">
-                            Legitimación de contratos colectivos existentes.
+                        <a href="#m3" data-toggle="modal" class="apop" data-target="#modal_3">Firma de contratos iniciales. Se deberá demostrar respaldo de los trabajadores para obtener la “Constancia de Representatividad”.
                         </a>
-                        <div style="display: none">
-                            <div id="m5" class="infancy">
-                                <h3>LEGITIMACIÓN DE CONTRATOS COLECTIVOS</h3>
-                                <br>
-                                <p class="hcolornegro">Conforme al artículo Décimo Primero Transitorio, el Decreto emitido el 1º de mayo donde los sindicatos deberán legitimar sus contratos colectivos de trabajo antes del 1º de mayo de 2023 a través de una consulta donde los trabajadores decidan mediante voto personal, libre, secreto y directo si aprueban o no el contenido de su contrato colectivo. Para que los sindicatos cumplan con esta obligación, la Secretaría del Trabajo y Previsión Social ha emitido el Protocolo para la Legitimación de Contratos Colectivos de Trabajo Existentes, así como la plataforma electrónica para el registro de consultas.</p>
-                                <a href="https://legitimacioncontratoscolectivos.stps.gob.mx/" target="_blank">https://legitimacioncontratoscolectivos.stps.gob.mx/</a>
+                        <div class="modal fade modal-responsive" id="modal_3">
+                            <div class="modal-dialog modal-responsive">
+                                <div class="modal-content" style="">
+                                    <div class="modal-header head-modal">                  
+                                        <h3 class="modal-title title-head">Democracia Sindical</h3>                      
+                                    </div>
+                                    <div class="modal-body margin-t">
+                                        <p class="tit_des font-weight-bold aling-center text-xl">Constancia de representatividad</p>
+                                        <p class="tit_des font-weight-bold aling-left" style="color: #b38247;">Art. 390 Bis, LFT</p>
+                                        <ul class="text-md text-black">
+                                            <li class="text-md">Documento expedido por el CFCRL que acredita que un sindicato cuenta con la representación de al menos el treinta por ciento de los trabajadores.</li>
+                                            <li class="text-md">El sindicato que pretenda emplazar a huelga para firma de un contrato colectivo inicial deberá contar con esta Constancia.</li>
+                                            <li class="text-md">En caso de que se presente más de una solicitud de Constancia, el CFCRL organizará una consulta a los trabajadores para determinar qué sindicato cuenta con el respaldo de la mayoría.</li>
+                                            <li class="text-md">La Constancia tendrá una vigencia de seis meses a partir de la fecha en que sea expedida.</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default btn-personalizado" data-dismiss="modal">Cerrar</button>
+                                    </div>                
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="listdescarga">
+                        <a href="#" data-toggle="modal" class="apop" data-target="#modal_4">Ratificación de acuerdos negociados sobre el contenido de un contrato colectivo o convenio de revisión.</a>
+                        <div class="modal fade modal-responsive" id="modal_4">
+                            <div class="modal-dialog modal-responsive">
+                                <div class="modal-content" style="">
+                                    <div class="modal-header head-modal">                  
+                                        <h3 class="modal-title title-head">Democracia Sindical</h3>                      
+                                    </div>
+                                    <div class="modal-body margin-t">
+                                        <p class="tit_des font-weight-bold aling-center text-xl">Ratificación de acuerdos negociados</p>
+                                        <p class="tit_des font-weight-bold aling-left" style="color: #b38247;">Arts. 390 Ter y 400 Bis, LFT</p>
+                                        <ul class="text-md text-black">
+                                            <li class="text-md">Los trabajadores deberán ratificar mediante voto personal, libre, directo y secreto los acuerdos negociados por su sindicato sobre el contenido del contrato colectivo o del convenio de revisión integral (cada dos años).</li>
+                                            <li class="text-md">La consulta será convocada y organizada por el sindicato que solicita la firma o revisión contractual.</li>
+                                            <li class="text-md">El CFCRL podrá validar y, en su caso, realizar una nueva consulta en caso de existir duda razonable sobre la legalidad del procedimiento.</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default btn-personalizado" data-dismiss="modal">Cerrar</button>
+                                    </div>                
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="listdescarga">
+                        <a href="#" data-toggle="modal" class="apop" data-target="#modal_5">Legitimación de contratos colectivos existentes.</a>
+                        <div class="modal fade modal-responsive" id="modal_5">
+                            <div class="modal-dialog modal-responsive">
+                                <div class="modal-content" style="">
+                                    <div class="modal-header head-modal">                  
+                                        <h3 class="modal-title title-head">Democracia Sindical</h3>                      
+                                    </div>
+                                    <div class="modal-body margin-t">
+                                        <p class="tit_des font-weight-bold aling-center text-xl">Legitimación de contratos colectivos</p>
+                                        <p class="text-md text-black" >Conforme al artículo Décimo Primero Transitorio, el Decreto emitido el 1º de mayo donde los sindicatos deberán legitimar sus contratos colectivos de trabajo antes del 1º de mayo de 2023 a través de una consulta donde los trabajadores decidan mediante voto personal, libre, secreto y directo si aprueban o no el contenido de su contrato colectivo. Para que los sindicatos cumplan con esta obligación, la Secretaría del Trabajo y Previsión Social ha emitido el Protocolo para la Legitimación de Contratos Colectivos de Trabajo Existentes, así como la <a href="https://legitimacioncontratoscolectivos.stps.gob.mx/" target="_blank" class="font-weight-bold">plataforma electrónica</a> para el registro de consultas.</p>
+                                    </div> 
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default btn-personalizado" data-dismiss="modal">Cerrar</button>
+                                    </div>                
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -295,23 +345,35 @@
                 <h4>Centro Federal de Conciliación y Registro Laboral</h4>
                 <p>Responsable de: </p>
                 <ul>
-                    <li>Registro de sindicatos y depósito de contratos colectivos.</li>
-                    <li>Conciliación a nivel federal.</li>
-                    <li>Verificación de procedimientos de democracia sindical.</li>
-                    <li>Emitir “Constancias de Representatividad”.</li>
+                    <li class="listdescarga">Registro de sindicatos y depósito de contratos colectivos.</li>
+                    <li class="listdescarga">Conciliación a nivel federal.</li>
+                    <li class="listdescarga">Verificación de procedimientos de democracia sindical.</li>
+                    <li class="listdescarga">Emitir “Constancias de Representatividad”.</li>
                 </ul>
-                <a href="#m6" class="fancybox btn btn-verdereforma btn-derecha" >Ver más</a>
-                <div style="display: none">
-                    <div id="m6" class="infancy">
-                        <h3>CENTRO FEDERAL DE CONCILIACIÓN Y REGISTRO LABORAL</h3>
-                        <br>
-                        <ul class="hcolornegro">
-                            <li>Será un organismo público descentralizado, sectorizado a la STPS, con personalidad jurídica y patrimonio propios</li>
-                            <li>Estará a cargo de la función conciliatoria de jurisdicción federal, así como del registro nacional de de sindicatos, contratos colectivos y reglamentos interiores de trabajo</li>
-                            <li>Verificará procesos de democracia sindical y emitirá la “Constancia de Representatividad” para la celebración de un contrato colectivo inicial</li>
-                        </ul>
+                <div class="aling-right">
+                    <button type="button" class="btn btn-default btn-sm shadow-none btn-personalizado" data-toggle="modal" data-target="#modal_6">Ver más</button>
+                </div>
+                <div class="modal fade modal-responsive" id="modal_6">
+                    <div class="modal-dialog modal-responsive">
+                        <div class="modal-content" style="">
+                            <div class="modal-header head-modal">                  
+                                <h3 class="modal-title title-head">Centro Federal de Conciliación y Registro Laboral</h3>                     
+                            </div>
+                            <div class="modal-body margin-t">
+                                <ul class="text-md">
+                                    <li class="text-md text-black">Será un organismo público descentralizado, sectorizado a la STPS, con personalidad jurídica y patrimonio propios.</li>
+                                    <li class="text-md text-black">Estará a cargo de la función conciliatoria de jurisdicción federal, así como del registro nacional de de sindicatos, contratos colectivos y reglamentos interiores de trabajo.</li>
+                                    <li class="text-md text-black">Verificará procesos de democracia sindical y emitirá la “Constancia de Representatividad” para la celebración de un contrato colectivo inicial.</li>
+                                    
+                                </ul>
+                            </div> 
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default btn-personalizado" data-dismiss="modal">Cerrar</button>
+                            </div>                
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -330,17 +392,18 @@
             </div>
         </div>
         <div class="row limite cajarow">
-
-            <div class="col-md-6 text-left">
+            <div class="col-md-6 text-left padding-2">
                 <h3 class="hcolorbeige espacioabajo">Reforma Constitucional</h3>
                 <p>Decreto por el que se declaran reformadas y adicionadas
                     diversas disposiciones de los artículos 107 y 123 de la
                     Constitución Política de los Estados Unidos Mexicanos,
                     en materia de Justicia Laboral.</p>
-                <a href="https://reformalaboral.stps.gob.mx/documentos/Decreto_Constit.pdf" target="_blank" class="btn btn-beige btn-derecha">Descargar</a>
+                <div style="text-align: right; ">
+                    <a href="https://reformalaboral.stps.gob.mx/documentos/Decreto_Constit.pdf" target="_blank" type="button" class="btn btn-default btn-sm shadow-none btn-descargar">Descargar</a>
+                </div>
             </div>
-            <div class="col-md-6">
-                <img src="./PLUMA.png" alt="" class="img-home">
+            <div class="col-md-6 padding-2">
+                <img src="img/PLUMA.png" alt="" class="img-home">
             </div>
         </div>
         <hr>
@@ -389,19 +452,19 @@
         <div class="row limite cajarow">
             <div class="col-md-4">
                 <a href="https://reformalaboral.stps.gob.mx/documentos/protocolo_de_legitimacion.pdf" target="_blank" class="anoclass">
-                    <img src="./4.png" alt="" class="imgjusticia">
+                    <img src="img/4.png" alt="" class="imgjusticia">
                     <p class="pnegritas hcolorblanco">Descargar el Protocolo</p>
                 </a>
             </div>
             <div class="col-md-4">
                 <a href="https://legitimacioncontratoscolectivos.stps.gob.mx/" target="_blank" class="anoclass">
-                    <img src="./5.png" alt="" class="imgjusticia">
+                    <img src="img/5.png" alt="" class="imgjusticia">
                     <p class="pnegritas">Plataforma para la legitimación de Contratos Colectivos</p>
                 </a>
             </div>
             <div class="col-md-4">
                 <a href="https://legitimacioncontratoscolectivos.stps.gob.mx/upload/tutorial.mp4" class="anoclass fancybox"  >
-                    <img src="./6.png" alt="" class="imgjusticia">
+                    <img src="img/6.png" alt="" class="imgjusticia">
                     <p class="pnegritas">Video Tutorial</p>
                 </a>
             </div>
@@ -412,7 +475,7 @@
     <div id="consejo" class="blanco fullpage">
         <div class="row limite cajarow">
             <div class="col-md-6">
-                <img src="./GRUPAL.png" alt="" class="img-home">
+                <img src="img/GRUPAL.png" alt="" class="img-home">
             </div>
             <div class="col-md-6 text-left hcolornegro">
                 <h3>CONSEJO DE COORDINACIÓN</h3>
@@ -431,9 +494,7 @@
             </div>
         </div>
     </div>
-
-
-    <div id="container" class="fullpage beige" style="min-height: 800px;">
+    <div id="container" class="fullpage beige mapa-responsive" style="width: 100%;">
         <div class="loading">
             <i class="icon-spinner icon-spin icon-large"></i>
             Cargando...
@@ -504,7 +565,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="./CONSTANCIA.png" alt="" class="img-home">
+                <img src="img/CONSTANCIA.png" alt="" class="img-home">
             </div>
         </div>
     </div>

@@ -2,7 +2,8 @@ Highcharts.mapChart('container', {
     chart: {
         //map: 'countries/mx/mx-all'
         map: Highcharts.maps["countries/mx/mx-all"],
-        backgroundColor: '#e0c9a3'
+        backgroundColor: '#e0c9a3',
+
     },
     exporting:false,
 
@@ -10,7 +11,8 @@ Highcharts.mapChart('container', {
         text: '<h2>ENTIDADES FEDERATIVAS</h2>',
         useHTML:true,
         style: {
-            font: '16px "Montserrat", Verdana, sans-serif'
+            font: '16px "Montserrat", Verdana, sans-serif',
+
         }
     },
     mapNavigation: {
