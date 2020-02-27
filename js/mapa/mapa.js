@@ -64,7 +64,7 @@ Highcharts.mapChart('container', {
             events: {
                 click: function(){
                     var row = this.options.row,
-                        $div = $('<div class="ventana">' +
+                        $div = $('<div class="ventana" style="background-color: white; ">' +
                             '<div class="titulo" >'+this.nombre+'</div>'+
                             '<div class="fecha" ><p class="pnegritas">Fecha de creación:</p> <p>'+this.fechaCreacion+'</p></div>'+
                             '<div class="fecha" ><p class="pnegritas" >Planes y Programas</p></div>'+
@@ -72,8 +72,9 @@ Highcharts.mapChart('container', {
                             '</div>')
                             .dialog({
                                 title: this.name,
-                                width: 370,
-                                height: 400
+                                width: 500,
+                                height: 400,
+                                
                             });
 
                 }
