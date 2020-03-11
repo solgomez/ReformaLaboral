@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Reforma Laboral | México</title>
+
+    <!-- RECAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!--JQUERY-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+    <!--GOOGLEFONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&display=swap" rel="stylesheet">
+
+    <!--BOOTSTRAP-->
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!--HIGHCHARTS-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/mx/mx-all.js"></script>
+
+    <!--JQUERY.UI--><!-- choca antes-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="lib/date/ui.datepicker-es-MX.js"></script>
+    <link rel="stylesheet" href="lib/date/datepicker.css">
+
+    <!--FANCYBOX-->
+    <link rel="stylesheet" href="./js/fancybox/dist/jquery.fancybox.min.css" />
+
+    <script src="./js/fancybox/dist/jquery.fancybox.min.js"></script>
+
+
+    <!--GOB MX-->
+    <link href="https://framework-gb.cdn.gob.mx/qa/assets/styles/main.css" rel="stylesheet">
+
+    <!--CSS KAT-->
+    <link rel="stylesheet" href="./template.css" />
+    <style>
+        .ficha-collapse .panel-heading {
+            padding: 8px 10px;
+            position: relative;
+        }
+        
+
+        .text-nav{
+            color: #13322a !important;
+            font-size: 15px !important;
+            font-weight: bold !important;
+        }
+        .btn-personalizado:hover {
+            background-color: white !important;
+            border:solid 2px #245c4d !important;
+            color: #245c4d !important;
+            font-weight: bold !important;
+        }
+        .btn-personalizado {
+            background-color:#245c4d;  
+            border: none; 
+            color: white; 
+            border-radius: 5px;
+        }
+        .btn-personalizado:active {
+            background-color:#245c4d;  
+            border: none; 
+            color: white; 
+            border-radius: 5px;
+
+        }
+        @media screen and (min-width: 720px) {
+            .margin-sup-inf {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-right: 50px;
+                margin-left: 50px;
+            }
+            .modal-responsive{
+                min-width: 70%; 
+            }
+            .mapa-responsive{
+                min-height: 800px !important;
+            }
+        }
+
+        .head-modal{
+            background-color: #e0c9a3!important;
+            margin-top: 0px;
+        }
+        .title-head{
+            font-weight: bold !important; 
+            color: #440008 !important; 
+            margin-bottom: 0px !important;
+        }
+        .margin-t{
+            margin-top: -15px;
+        }
+        .font-weight-bold{
+            font-weight: bold !important;
+        }
+        .aling-left{
+            text-align: left !important;
+        }
+        .aling-center{
+            text-align: center !important;
+        }
+        .text-md{
+            font-size: 14px !important ;
+        }
+        .text-xl{
+            font-size: 24px !important ;
+        }
+        .text-black{
+            color: black;
+        }
+        .aling-right{
+            text-align: right;
+        }
+        .text-lg {
+            font-size: 30px;
+        }
+        .btn-descargar:hover {
+            background-color: white !important;
+            border: solid 2px #dbbd90 !important;
+            color: #245c4d !important;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .btn-descargar{
+            background-color:#dbbd90;  
+            border: none; 
+            color: white;  
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .padding-2{
+            padding: 15px;
+        }
+        .font-weight-semibold{
+            font-weight: 500;
+        }
+        .aling-justify{
+            text-align: justify;
+        }
+        .ui-dialog .ui-dialog-title {
+            float: left;
+            margin: .1em .1em;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            font-size: 30px;
+        }
+        .center-difusion {
+            margin: auto;
+            background: #245c4d;
+            color: white;
+            padding: 35px;
+            margin-top: 15px;
+        }
+        .center-difusion:hover{
+            background: #dbbd90;
+            color: #245c4d;
+        }
+        .page-container {
+            text-align: center;
+            padding: 20px;
+            display: block;
+            margin: auto;
+            width: 90%;
+            margin-top: 15px;
+        }
+        .page-hr{
+            width: 90%;
+            text-align: center;
+            display: block;
+            margin: auto;
+        }
+        .img-prensa{
+            width: 220px;
+            height: 220px;
+        }
+        @media only screen and (max-width: 600px) {
+         .page-container {
+            text-align: center;
+            padding: 10px;
+            display: block;
+            margin: auto;
+            width: 100%;
+            margin-top: 5px;
+        }
+        .page-hr{
+            width: 95%;
+            text-align: center;
+            display: block;
+            margin: auto;
+        }
+        }
+        /*
+        .img-prensa:hover{
+            width: 250px;
+            height: 250px;
+        }
+        */
+    </style>
+
+</head>
+<body>
+<div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            var primero = document.getElementById("primero");
+
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                primero.className += " primerhijo";
+                $('.desplegable').show();
+            } else {
+                x.className = "topnav";
+                primero.className = "bordederecho desplegable";
+                $('.desplegable').hide();
+            }
+
+        }
+    </script>
+    <div id="menuprincipal">
+        <div class="topnav" id="myTopnav">
+            <div id="logojovenes" class="topmenu izquierdamenu">
+                <img src="img/logo.png" alt="Reforma Laboral" class="logoprincipal">
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="topmenu derechamenu" >
+                <a href="#normatividad" class="bordederecho desplegable text-nav" id="primero">Normatividad</a>
+                <a href="#consejo" class="bordederecho desplegable text-nav">Consejo de Coordinación</a>
+                <a href="#documentos" class="bordederecho desplegable text-nav">Documentos</a>
+                <a href="#container" class="bordederecho desplegable text-nav">Entidades Federativas</a>
+                <a href="#difusion" class="bordederecho desplegable text-nav">Difusión</a>
+                <a href="contacto.html" class="bordederecho desplegable text-nav">Directorio</a>              
+                <a href="#contacto" class="desplegable text-nav">Contacto</a>
+            </div>
+        </div>
+    </div>
+    <div id="imagenprincipal">
+        <!--
+        <div id="supertitulo">
+            <h1>
+                REFORMA qwert<BR> LABORAL
+            </h1>
+        </div>
+        -->
+    </div>
+</div>
+<div class="row page-container">
+        <div class="col-md-4"> 
+            <img src="img/8.png" alt="Prensa" class="img-prensa">
+        </div>
+        <div class="col-md-8"> 
+            <p style="font-size: 24px; text-align: justify; color: #b38247;" class="font-weight-bold">¿Qué tomar en cuenta para cambiar los estatutos sindicales a próposito de las nuevas disposiciones de la ley laboral?</p>
+            <p style="text-align: justify; color: #1b312b; font-weight: 600;">La Reforma Laboral publicada en el Diario Oficial de la Federaciòn (DOF) el 1 de mayo de 2019 da a los sindicatos un plazo de hastas 240 días (8 meses) para incluir en sus estatutos mecanismos para elegir a sus directivas sindicales a través del voto personal, libre, directo y secreto...</p>
+            <div class="aling-right" style="margin-top: 20px;">
+                <button type="button" class="btn btn-default btn-sm shadow-none btn-personalizado" data-toggle="modal" data-target="#m1">Leer más</button>
+            </div>
+        </div>
+</div>
+<div class="page-hr">
+    <hr>
+</div>
+<div class="row page-container">
+    <div class="col-md-4"> 
+        <img src="img/DocsRelev.png" alt="Prensa" class="img-prensa">
+    </div>
+    <div class="col-md-8"> 
+        <p style="font-size: 24px; text-align: left; color: #b38247;" class="font-weight-bold">¿Qué tomar en cuenta para cambiar los estatutos sindicales a próposito de las nuevas disposiciones de la ley laboral?</p>
+        <p style="text-align: left; color: #1b312b; font-weight: 600;">La Reforma Laboral publicada en el Diario Oficial de la Federaciòn (DOF) el 1 de mayo de 2019 da a los sindicatos un plazo de hastas 240 días (8 meses) para incluir en sus estatutos mecanismos para elegir a sus directivas sindicales a través del voto personal, libre, directo y secreto...</p>
+    </div>
+</div>
+<div class="page-hr">
+    <hr>
+</div>
+<div class="row page-container">
+    <div class="col-md-4"> 
+        <img src="img/8.png" alt="Prensa" class="img-prensa">
+    </div>
+    <div class="col-md-8"> 
+        <p style="font-size: 24px; text-align: left; color: #b38247;" class="font-weight-bold">¿Qué tomar en cuenta para cambiar los estatutos sindicales a próposito de las nuevas disposiciones de la ley laboral?</p>
+        <p style="text-align: left; " >La Reforma Laborla publicada en el Diario Oficial de la Federaciòn (DOF) el 1 de mayo de 2019 da a los sindicatos un plazo de hastas 240 días (8 meses) para incluir en sus estatutos mecanismos para elegir a sus directivas sindicales a través del voto personal, libre, directo y secreto...</p>
+    </div>
+</div>
+<div class="page-hr">
+    <hr>
+</div>
+
+<div class="page-container"  style="width: 15%;">
+  
+        <ul class="pagination">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+        </ul>
+</div>
+
+<a id="contacto"></a>
+    <br>
+    <br>
+<div  id="contacto" class="fullpage beige" >
+    <div class="row cajarow limite" id="footerlogo">
+        <div class="col-md-12">
+            <h3 class="hcolornegro">CONTACTO</h3>
+            <h4 class="hcolornegro">ORIENTACIÓN Y ASESORÍA</h4>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center hcolornegro pnegritas">PROCURADURÍA FEDERAL DE LA DEFENSA DEL TRABAJO</p>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-map-marker-alt"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    Dr. José María Vértiz 211, Doctores, Ciudad de México. C.P. 06720
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-envelope"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    <p style="word-break: break-all;">orientacionprofedet@stps.gob.mx</p>
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-phone"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    59 98 20 00
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p class="text-center hcolornegro pnegritas">UNIDAD DE ENLACE PARA LA REFORMA AL SISTEMA DE JUSTICIA LABORAL</p>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-map-marker-alt"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                   La Morena 804 Piso 5, Narvarte Poniente. Ciudad de México, C.P. 03020
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-envelope"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    reforma.laboral@stps.gob.mx
+                </div>
+            </div>
+            <div class="lidocs">
+                <div class="vinblock"><span class="vin vinverde"><i class="fa fa-phone"></i></span></div>
+                <div class="liblock text-left hcolornegro">
+                    (55) 2000 5300
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script>
+    $( function() {
+        $(".fancybox").fancybox();
+        var icons = {
+            header: "ui-icon-caret-1-n",
+            activeHeader: "ui-icon-caret-1-s"
+        };
+        $( "#accordion" ).accordion({
+            collapsible: true,
+            heightStyle: "content",
+            icons: icons,
+            disabled: false
+        });
+        $( "#toggle" ).button().on( "click", function() {
+            if ( $("#accordion").accordion( "option", "icons" ) ) {
+                $("#accordion").accordion( "option", "icons", null );
+            } else {
+                $("#accordion").accordion( "option", "icons", icons );
+            }
+        });
+    } );
+</script>
+<script type="text/javascript" src="js/mapa/datajcf.js"></script>
+<script type="text/javascript" src="js/mapa/mx-all.js"></script>
+<script type="text/javascript" src="js/mapa/mapa.js"></script>
+
+<script src="https://framework-gb.cdn.gob.mx/qa/gobmx.js"></script>
+
+</body>
+</html>

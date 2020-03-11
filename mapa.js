@@ -71,7 +71,8 @@ Highcharts.mapChart('container', {
                             .dialog({
                                 title: this.name,
                                 width: 500,
-                                height: 400
+                                height: 400.
+
                             });
 
                 }

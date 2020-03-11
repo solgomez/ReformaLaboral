@@ -55,6 +55,12 @@
     <!--CSS KAT-->
     <link rel="stylesheet" href="./template.css" />
     <style>
+        .ficha-collapse .panel-heading {
+            padding: 8px 10px;
+            position: relative;
+        }
+        
+
         .text-nav{
             color: #13322a !important;
             font-size: 15px !important;
@@ -127,6 +133,9 @@
         .aling-right{
             text-align: right;
         }
+        .text-lg {
+            font-size: 30px;
+        }
         .btn-descargar:hover {
             background-color: white !important;
             border: solid 2px #dbbd90 !important;
@@ -150,6 +159,27 @@
         .aling-justify{
             text-align: justify;
         }
+        .ui-dialog .ui-dialog-title {
+            float: left;
+            margin: .1em .1em;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            font-size: 30px;
+        }
+        .center-difusion {
+            margin: auto;
+            background: #245c4d;
+            color: white;
+            padding: 35px;
+            margin-top: 15px;
+        }
+        .center-difusion:hover{
+            background: #dbbd90;
+            color: #245c4d;
+        }    
     </style>
 
 </head>
@@ -186,17 +216,19 @@
                 <a href="#documentos" class="bordederecho desplegable text-nav">Documentos</a>
                 <a href="#container" class="bordederecho desplegable text-nav">Entidades Federativas</a>
                 <a href="#difusion" class="bordederecho desplegable text-nav">Difusión</a>
-                <a href="#difusion" class="bordederecho desplegable text-nav">Directorio</a>               
+                <a href="contacto.html" class="bordederecho desplegable text-nav">Directorio</a>              
                 <a href="#contacto" class="desplegable text-nav">Contacto</a>
             </div>
         </div>
     </div>
     <div id="imagenprincipal">
+        <!--
         <div id="supertitulo">
             <h1>
-                REFORMA <BR> LABORAL
+                REFORMA qwert<BR> LABORAL
             </h1>
         </div>
+        -->
     </div>
 </div>
 <main>
@@ -386,7 +418,7 @@
     <br>
     <br>
     <br>
-    <div id="" class="verdereforma fullpage">
+    <div id="" class="verdereforma fullpage" style="border-radius: 20%; ">
 
         <div class="row limite cajarow">
             <div class="col-md-12 espacioabajo">
@@ -481,8 +513,10 @@
         </div>
     </div>
 
-
-    <div id="consejo" class="blanco fullpage">
+    <a id="consejo"></a>
+    <br>
+    <br>
+    <div class="blanco fullpage">
         <div class="row limite cajarow">
             <div class="col-md-6">
                 <img src="img/GRUPAL.png" alt="" class="img-home">
@@ -505,14 +539,20 @@
             </div>
         </div>
     </div>
+    <br>   
+    <br>
+    <br>
     <div id="container" class="fullpage beige mapa-responsive" style="width: 100%;">
         <div class="loading">
             <i class="icon-spinner icon-spin icon-large"></i>
             Cargando...
         </div>
     </div>
-
-    <div id="documentos" class="blanco fullpage">
+    <a id="documentos"></a>
+    <br>
+    <br>
+    <br>
+    <div  class="blanco fullpage">
         <div class="row limite cajarow">
             <div class="col-md-6 text-left">
                 <h3>DOCUMENTOS RELEVANTES</h3>
@@ -576,37 +616,44 @@
             </div>
         </div>
     </div>
-
-    <div id="difusion" class="blanco fullpage">
+    <a id="difusion"></a>
+    <br>
+    <br>
+   
+    <div class="blanco fullpage">
         <h3 class="hcolorverde">DIFUSIÓN</h3>
-        <div class="row limite cajarow">
-            <div class="col-md-4  ">
-                <div class="bloqueverde">
-                    <a href="Documentos/ModificaciondeEstatutosSindicales.pdf" target="_blank" class="anoclass">
-                        <h4>Estatutos sindicales nuevas disposiciones</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4  ">
-                <div class="bloqueverde">
-                    <a href="Documentos/ProcedimientoLegitimacionContratos.pdf" target="_blank" class="anoclass">
-                        <h4>Legitimación de contratos colectivos</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4  ">
-                <div class="bloqueverde">
+        <div class="row limite cajarow">            
+            <div class="col-md-4">
+                <div class="center-difusion ">                
                     <a href="Documentos/EstrategiaNacionalReformaLaboral.pdf" target="_blank" class="anoclass">
-                        <h4> Implementación del sistema de justicia laboral</h4>
-                    </a>
+                        <p class="font-weight-bold text-lg">Prensa</p>
+                    </a>              
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="center-difusion ">                
+                    <a href="Documentos/EstrategiaNacionalReformaLaboral.pdf" target="_blank" class="anoclass">
+                        <p class="font-weight-bold text-lg">Boletines</p>
+                    </a>              
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="center-difusion ">                
+                    <a href="prensa.html" class="anoclass">
+                        <p class="font-weight-bold text-lg">Material Ilustrativo</p>
+                    </a>              
+                </div>
+            </div>
+           
 
         </div>
     </div>
 
 
 </main>
+<a id="contacto"></a>
+    <br>
+    <br>
 <div  id="contacto" class="fullpage beige" >
     <div class="row cajarow limite" id="footerlogo">
         <div class="col-md-12">
